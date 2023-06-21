@@ -115,3 +115,43 @@ if (mark.bmi > john.bmi) {
     console.log(`${john.fullName}'s BMI (${john.bmi}) is higher than ${mark.fullName}'s BMI (${mark.bmi})`)
 }
 
+
+
+
+
+
+const calcTip1 = function (bill) {
+    return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+}
+
+/* Write your code below. Good luck! 🙂 */
+let bills1 = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+let tips1 = [];
+let totals = [];
+
+for (let i = 0; i < bills1.length; i++) {
+    const tip = calcTip1(bills1[i]);
+    tips1.push(tip);
+    const total = bills1[i] + tip;
+    totals.push(total);
+}
+
+console.log("Tips:", tips1);
+console.log("Totals:", totals);
+
+
+const calcAverage = function (arr) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+    return sum / arr.length;
+};
+
+
+const average = calcAverage(totals);
+console.log("Average:", average);
+
+
+
+
